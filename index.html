@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="input-group mb-3">
+            <input id="search-meal" type="text" class="form-control" placeholder="Search by book name">
+            <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+        </div>
+        <div class="container-fluid">
+            <!-- error-message -->
+            <div id="alert-msg" class="container-fluid bg-warning p-4 text-center d-none">
+                <h1 class="capitalize">Data not found</h1>
+            </div>
+            <!-- loader-spinner -->
+            <div id="preloader" class="spinner-grow d-none" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div id="display-container" class="container-fluid row g-3">
+
+            <!-- <div class="card p-0 col">
+                <img src="images.jpg" alt="" class="card-img-top">
+                <div class="card-body position-absoulate">
+                    <h1 class="text-capitalize">book name</h1>
+                    <h4 class="card-title text-start">Author:omuk tomuk folou</h4>
+                    <p class="text-start">publish date :20 april,2000</p>
+                </div>
+            </div>
+
+
+            <div class="card p-0 col">
+                <img src="images.jpg" alt="" class="card-img-top">
+                <div class="card-body position-absoulate text-center">
+                    <h1 class="text-capitalize">book name</h1>
+                    <h4 class="card-title text-start">Author:omuk tomuk folou</h4>
+                    <p class="text-start">publish date :20 april,2000</p>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- scripting -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
