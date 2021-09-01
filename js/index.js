@@ -51,7 +51,9 @@ const setData = data => {
             </div>
             `
             container.appendChild(div);
+            showData.innerText = counter;
         })
 
     }
+
 }
