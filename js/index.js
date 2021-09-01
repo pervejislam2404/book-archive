@@ -13,7 +13,7 @@ searchButton.addEventListener('click', () => {
 
     const url = `http://openlibrary.org/search.json?q=${inpValue}`;
     console.log();
-    fetch(`${url}`)
+    fetch(url)
         .then(res => res.json())
         .then(data => setData(data))
         .catch(err => console.error("something went wrong", err))
@@ -35,14 +35,14 @@ const setData = data => {
         const bookQuantity = book.slice(0, 25)
             // const quantity = [...bookQuantity]
         bookQuantity.forEach(book => {
-            console.log(book);
+            // console.log(book);
             counter = counter + 1;
             quantity.classList.remove('d-none')
             let img = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
                 // console.log(img)
 
             const { author_name, first_publish_year, title } = book;
-            const [...author] = author_name;
+            // const [...author] = author_name;
             const div = document.createElement('div');
             div.classList.add('col-3')
             div.innerHTML = `
@@ -50,7 +50,7 @@ const setData = data => {
                <img src="${img}" alt="" height="300"; class="card-img-top">
                 <div class="card-body">
                     <h2 class="text-capitalize">${title}</h2>
-                    <h4 class="card-title text-start">Author:${author[0]}</h4>
+                    <h4 class="card-title text-start">Author:${author_name[0]}</h4>
                     <p class="text-start">published in ${first_publish_year}</p>
                 </div>
             </div>
