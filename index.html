@@ -11,19 +11,19 @@
 
 <body>
     <div class="container p-5">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 w-50 mx-auto">
             <input id="search-meal" type="text" class="form-control" placeholder="Search by book name">
             <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
         </div>
         <div class="container-fluid">
             <!-- error-message -->
             <div id="alert-msg" class="container-fluid bg-warning p-4 text-center d-none">
-                <h1 class="capitalize">Data not found</h1>
+                <h1 class="capitalize">No result found</h1>
             </div>
             <!-- loader-spinner -->
             <div id="quantity" class="bg-primary p-4 text-center text-white m-2" role="status">
-                <h2>Total data found:<span id="total-found" class="">00</span></h2>
-                <h2>Showing data:<span id="total-show">00</span></h2>
+                <h2>Total data found <span id="total-found" class="">00</span></h2>
+                <h2>Showing data <span id="total-show">00</span></h2>
             </div>
         </div>
 
