@@ -12,11 +12,11 @@ searchButton.addEventListener('click', () => {
     const inpValue = inputName.value;
     // data-fetching
     const url = `https://openlibrary.org/search.json?q=${inpValue}`;
-    console.log();
+
     fetch(url)
         .then(res => res.json())
         .then(data => setData(data))
-        .catch(err => console.error("something went wrong", err))
+        .catch(err => console.error(err))
     inputName.value = '';
 })
 
@@ -37,14 +37,14 @@ const setData = data => {
         const bookQuantity = book.slice(0, 25)
             //    set-data-to-main-container
         bookQuantity.forEach(book => {
-            console.log(book)
-                //    showed-book-quantity
+            //    showed-book-quantity
             counter = counter + 1;
             quantity.classList.remove('d-none')
             let img = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
                 //    object-destructuring
             const { author_name, first_publish_year, publisher, title } = book;
             const author = author_name[0];
+            const publisherName = publisher.slice(0, 5);
             // making-card-for-each-book
             const div = document.createElement('div');
             div.classList.add('col-3')
@@ -54,7 +54,7 @@ const setData = data => {
                 <div class="card-body">
                     <h3 class="text-capitalize">${title}</h3>
                     <h5 class="card-title text-start">Author: ${!author? unknown : author}</h5>
-                    <p class="text-start">Publisher : ${publisher}</p>
+                    <p class="text-start"><span class="fw-bold">Publisher : </span>${publisherName}</p>
                     <p class="text-start">Published in ${first_publish_year}</p>
                 </div>
             </div>
