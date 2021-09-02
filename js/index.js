@@ -5,7 +5,7 @@ const msg = document.getElementById('alert-msg');
 const quantity = document.getElementById('quantity');
 const totalData = document.getElementById('total-found')
 const showData = document.getElementById('total-show')
-
+    // showing-data-container
 let counter = 0;
 document.getElementById('total-show').innerText = counter;
 searchButton.addEventListener('click', () => {
