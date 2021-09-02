@@ -28,29 +28,28 @@ const setData = data => {
         quantity.classList.add('d-none')
 
     } else {
-
+        counter = 0;
         msg.classList.add('d-none')
         const book = data.docs;
         document.getElementById('total-found').innerText = book.length;
         const bookQuantity = book.slice(0, 25)
             // const quantity = [...bookQuantity]
         bookQuantity.forEach(book => {
-            // console.log(book);
+            console.log(book);
             counter = counter + 1;
             quantity.classList.remove('d-none')
             let img = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
                 // console.log(img)
-
             const { author_name, first_publish_year, title } = book;
-            // const [...author] = author_name;
+            const author = author_name[0];
             const div = document.createElement('div');
             div.classList.add('col-3')
             div.innerHTML = `
             <div class="card p-0 col">
                <img src="${img}" alt="" height="300"; class="card-img-top">
                 <div class="card-body">
-                    <h2 class="text-capitalize">${title}</h2>
-                    <h4 class="card-title text-start">Author:${author_name[0]}</h4>
+                    <h3 class="text-capitalize">${title}</h3>
+                    <h5 class="card-title text-start">Author:${!author? unknown : author}</h5>
                     <p class="text-start">published in ${first_publish_year}</p>
                 </div>
             </div>
